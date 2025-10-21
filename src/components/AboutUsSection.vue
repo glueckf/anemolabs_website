@@ -15,9 +15,9 @@
 
     <!-- Team Section -->
     <div class="team-grid">
-      <div class="team-image">
-        <img src="../assets/images/founders.jpg" alt="Founders Robert Kelm and Finn Glück" />
-      </div>
+      <!-- <div class="team-image">
+        <img src="../assets/founders.jpg" alt="Founders Robert Kelm and Finn Glück" />
+      </div> -->
       <div class="team-info">
         <h3 class="team-heading">ROBERT KELM & FINN GLÜCK</h3>
 
@@ -80,7 +80,7 @@
 
 .team-grid {
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
+  grid-template-columns: 1fr;
   gap: 60px;
   align-items: start;
 }

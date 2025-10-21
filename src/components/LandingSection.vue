@@ -14,7 +14,7 @@
         playsinline
         @ended="handleVideoEnd"
       >
-        <source src="../assets/videos/logoanimation_text_backround.mp4" type="video/mp4" />
+        <source src="../assets/Animationen/logoanimation_text_backround.mp4" type="video/mp4" />
       </video>
 
       <!-- Headline Text (shown after video) -->
@@ -65,11 +65,9 @@ onMounted(() => {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('../assets/images/trees.jpeg');
+  background-color: #183132;
   background-size: cover;
   background-position: center;
-  filter: blur(4px);
-  transform: scale(1.1);
 }
 
 .overlay {

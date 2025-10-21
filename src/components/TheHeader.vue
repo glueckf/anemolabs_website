@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <div class="header-content">
-      <img src="../assets/logos/anemolabs_static_logo.svg" alt="AnemoLabs Logo" class="logo" />
+      <img src="../assets/Logo/Wort-Bildmarke/anemolabs_white.svg" alt="AnemoLabs Logo" class="logo" />
     </div>
   </header>
 </template>
