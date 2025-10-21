@@ -14,7 +14,7 @@
         playsinline
         @ended="handleVideoEnd"
       >
-        <source src="../assets/videos/logoanimation_text_backround.mp4" type="video/mp4" />
+        <source src="../assets/Animationen/logoanimation_text_backround.mp4" type="video/mp4" />
       </video>
 
       <!-- Headline Text (shown after video) -->
