@@ -1,0 +1,49 @@
+/* Global Brand Identity */
+:root {
+  --color-dark-primary: #183132;
+  --color-dark-secondary: #004D43;
+  --color-light-primary: #EBFFF5;
+  --color-accent: #D0FF71;
+  --color-white: #FFFFFF;
+  --color-text-primary: #183132;
+  --color-text-light: #EBFFF5;
+}
+
+/* Global Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Figtree', sans-serif;
+  background-color: var(--color-light-primary);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Typography Utilities */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* Section Spacing */
+section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 60px 20px;
+  }
+}
