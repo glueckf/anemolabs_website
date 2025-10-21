@@ -24,11 +24,11 @@
 </template>
 
 <script setup>
-import pythonLogo from '../assets/logos/python-logo-only.svg'
-import fastapiLogo from '../assets/logos/FastAPI.svg'
-import dockerLogo from '../assets/logos/docker.svg'
-import typescriptLogo from '../assets/logos/typescript.svg'
-import vueLogo from '../assets/logos/vue.svg'
+import pythonLogo from '../assets/Software Icons/black_for_light_background/python-logo-only 1.png'
+import fastapiLogo from '../assets/Software Icons/black_for_light_background/FastAPI.png'
+import dockerLogo from '../assets/Software Icons/black_for_light_background/docker-mark-blue-2.png'
+import typescriptLogo from '../assets/Software Icons/black_for_light_background/ts-logo-256.png'
+import vueLogo from '../assets/Software Icons/black_for_light_background/vue.png'
 
 const logos = [
   { src: pythonLogo, alt: 'Python' },

@@ -41,13 +41,13 @@
       </ul>
 
       <!-- Tech Carousel -->
-      <!-- <TechCarousel /> -->
+      <TechCarousel />
     </div>
   </section>
 </template>
 
 <script setup>
-// import TechCarousel from './TechCarousel.vue'
+import TechCarousel from './TechCarousel.vue'
 </script>
 
 <style scoped>
