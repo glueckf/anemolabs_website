@@ -16,7 +16,7 @@
     <!-- Team Section -->
     <div class="team-grid">
       <div class="team-image">
-        <img src="../assets/images/founders.jpg" alt="Founders Robert Kelm and Finn Glück" />
+        <img src="../assets/founders.jpg" alt="Founders Robert Kelm and Finn Glück" />
       </div>
       <div class="team-info">
         <h3 class="team-heading">ROBERT KELM & FINN GLÜCK</h3>
