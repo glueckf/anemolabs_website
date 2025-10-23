@@ -1,38 +1,11 @@
 <template>
   <section class="contact">
     <div class="contact-card">
-      <h2 class="main-heading">Let's Build Something Together</h2>
       <h3 class="sub-heading">Ready to discuss your next software project?</h3>
 
       <div class="email-container">
         <a href="mailto:info@anemolabs.de" class="email-link">INFO@ANEMOLABS.DE</a>
         <div class="email-underline"></div>
-      </div>
-
-      <div class="contact-details">
-        <div class="social-links">
-          <a
-            href="https://linkedin.com/company/anemolabs"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="social-link"
-          >
-            LinkedIn
-          </a>
-          <span class="separator">•</span>
-          <a
-            href="https://github.com/anemolabs"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="social-link"
-          >
-            GitHub
-          </a>
-        </div>
-
-        <div class="location">
-          <span>📍 Berlin, Germany</span>
-        </div>
       </div>
     </div>
   </section>
@@ -43,25 +16,15 @@
 
 <style scoped>
 .contact {
-  background-color: var(--color-light-primary);
-  padding: 80px 20px 100px;
+  background-color: transparent;
+  padding: 0;
 }
 
 .contact-card {
-  background-color: var(--color-white);
+  background-color: #EBFFF5;
   border-radius: 16px;
-  padding: 60px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.main-heading {
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: var(--color-dark-secondary);
-  margin-bottom: 16px;
-  line-height: 1.2;
+  padding: 80px 60px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .sub-heading {
@@ -72,77 +35,38 @@
 }
 
 .email-container {
-  margin-bottom: 50px;
+  margin-bottom: 0;
 }
 
 .email-link {
   display: inline-block;
   font-size: 3rem;
   font-weight: 600;
-  color: var(--color-dark-secondary);
+  color: var(--color-dark-primary);
   text-decoration: none;
   letter-spacing: -0.02em;
   transition: color 0.3s ease;
 }
 
 .email-link:hover {
-  color: var(--color-accent);
+  color: var(--color-dark-secondary);
 }
 
 .email-underline {
   width: 100%;
-  height: 3px;
-  background-color: var(--color-dark-secondary);
+  height: 4px;
+  background-color: var(--color-dark-primary);
   margin-top: 16px;
   transition: background-color 0.3s ease;
 }
 
 .email-link:hover + .email-underline {
-  background-color: var(--color-accent);
-}
-
-.contact-details {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.social-links {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.social-link {
-  font-size: 1rem;
-  color: var(--color-text-primary);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.social-link:hover {
-  color: var(--color-accent);
-}
-
-.separator {
-  color: var(--color-text-primary);
-  opacity: 0.3;
-}
-
-.location {
-  font-size: 1rem;
-  color: var(--color-text-primary);
+  background-color: var(--color-dark-secondary);
 }
 
 @media (max-width: 768px) {
   .contact-card {
     padding: 40px 30px;
-  }
-
-  .main-heading {
-    font-size: 1.8rem;
   }
 
   .sub-heading {
@@ -152,11 +76,6 @@
   .email-link {
     font-size: 1.8rem;
     word-break: break-all;
-  }
-
-  .contact-details {
-    flex-direction: column;
-    align-items: flex-start;
   }
 }
 </style>

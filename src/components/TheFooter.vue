@@ -1,13 +1,28 @@
 <template>
   <footer class="footer">
     <div class="footer-content">
-      <div class="footer-left">
-        <p>&copy; 2025 AnemoLabs</p>
+      <div class="footer-top">
+        <div class="tagline">MODULAR BY NATURE.</div>
+        <div class="logo-container">
+          <img src="../assets/Logo/Wort-Bildmarke/anemolabs_white.svg" alt="AnemoLabs" class="footer-logo" />
+        </div>
       </div>
-      <div class="footer-right">
-        <a href="#impressum" class="footer-link">Impressum</a>
-        <span class="separator">|</span>
-        <a href="#privacy" class="footer-link">Privacy Policy</a>
+
+      <div class="footer-bottom">
+        <div class="footer-info">
+          <span>Berlin, Germany</span>
+          <span class="separator">•</span>
+          <span>&copy; 2025</span>
+        </div>
+        <div class="footer-links">
+          <a href="https://linkedin.com/company/anemolabs" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
+          <span class="separator">•</span>
+          <a href="https://github.com/anemolabs" target="_blank" rel="noopener noreferrer" class="footer-link">Github</a>
+          <span class="separator">•</span>
+          <a href="#legal" class="footer-link">Legal Notice</a>
+          <span class="separator">•</span>
+          <a href="#privacy" class="footer-link">Privacy Policy</a>
+        </div>
       </div>
     </div>
   </footer>
@@ -20,12 +35,37 @@
 .footer {
   background-color: var(--color-dark-primary);
   color: var(--color-text-light);
-  padding: 40px 20px;
+  padding: 60px 80px 40px;
+  margin-top: 80px;
 }
 
 .footer-content {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.tagline {
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--color-text-light);
+}
+
+.footer-logo {
+  height: 50px;
+  width: auto;
+}
+
+.footer-bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,42 +73,58 @@
   gap: 20px;
 }
 
-.footer-left p {
-  font-size: 0.95rem;
-  opacity: 0.9;
-}
-
-.footer-right {
+.footer-info {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.95rem;
 }
 
 .footer-link {
   color: var(--color-text-light);
   text-decoration: none;
-  font-size: 0.95rem;
-  opacity: 0.9;
+  opacity: 0.8;
   transition: opacity 0.3s ease;
 }
 
 .footer-link:hover {
   opacity: 1;
-  color: var(--color-accent);
 }
 
 .separator {
-  opacity: 0.5;
+  opacity: 0.4;
 }
 
 @media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
-    text-align: center;
+  .footer {
+    padding: 40px 20px 30px;
   }
 
-  .footer-right {
-    justify-content: center;
+  .footer-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  .tagline {
+    font-size: 1.8rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
   }
 }
 </style>

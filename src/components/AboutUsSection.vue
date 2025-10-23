@@ -1,23 +1,24 @@
 <template>
   <section class="about-us">
-    <!-- Main Heading -->
-    <h2 class="section-heading">WHO WE ARE</h2>
+    <div class="content-card">
+      <!-- Main Heading -->
+      <h2 class="section-heading">WHO WE ARE</h2>
 
-    <!-- Intro Text -->
-    <div class="intro-text">
-      <p>
-        <span class="highlight">AnemoLabs</span> emerged from a shared vision: building
-        high-quality, clean and modern software for businesses. Founded in
-        <span class="highlight">2025</span> by two befriended developers who met at TU Berlin,
-        we combine technical precision with entrepreneurial drive.
-      </p>
-    </div>
+      <!-- Intro Text -->
+      <div class="intro-text">
+        <p>
+          <span class="highlight">AnemoLabs</span> emerged from a shared vision: building
+          high-quality, clean and modern software for businesses. Founded in
+          <span class="highlight">2025</span> by two befriended developers who met at TU Berlin,
+          we combine technical precision with entrepreneurial drive.
+        </p>
+      </div>
 
     <!-- Team Section -->
     <div class="team-grid">
-      <!-- <div class="team-image">
-        <img src="../assets/founders.jpg" alt="Founders Robert Kelm and Finn Glück" />
-      </div> -->
+      <div class="team-image">
+        <img src="../assets/founders.JPG" alt="Founders Robert Kelm and Finn Glück" />
+      </div>
       <div class="team-info">
         <h3 class="team-heading">ROBERT KELM & FINN GLÜCK</h3>
 
@@ -43,6 +44,7 @@
         </div>
       </div>
     </div>
+    </div>
   </section>
 </template>
 
@@ -51,14 +53,14 @@
 
 <style scoped>
 .about-us {
-  background-color: var(--color-light-primary);
+  background-color: transparent;
 }
 
 .section-heading {
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   font-weight: 600;
-  color: var(--color-dark-secondary);
-  margin-bottom: 40px;
+  color: var(--color-text-primary);
+  margin-bottom: 30px;
   letter-spacing: 0.05em;
 }
 
@@ -80,7 +82,7 @@
 
 .team-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: start;
 }
@@ -89,7 +91,7 @@
   width: 100%;
   height: auto;
   border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .team-heading {

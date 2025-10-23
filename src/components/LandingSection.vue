@@ -1,31 +1,36 @@
 <template>
   <section class="landing">
+    <!-- This background will show if the video fails to load -->
     <div class="background-image"></div>
     <div class="overlay"></div>
 
     <div class="content">
-      <!-- Video Animation -->
+      <!--
+        Video Animation
+        - Removed 'loop' attribute.
+        - Removed '@ended' handler and 'showVideo' logic.
+        - The video will now play once and stop, showing the last frame.
+
+        *** IMPORTANT ***
+        The video file '../assets/Animationen/logoanimation_text_backround.mp4'
+        was NOT in the uploaded file list. If this file is missing, the
+        video will not play, and only the dark background will be visible.
+      -->
       <video
-        v-show="showVideo"
         ref="videoRef"
         class="intro-video"
         autoplay
         muted
         playsinline
-        @ended="handleVideoEnd"
       >
         <source src="../assets/Animationen/logoanimation_text_backround.mp4" type="video/mp4" />
       </video>
 
-      <!-- Headline Text (shown after video) -->
-      <div v-show="!showVideo" class="headline" :class="{ 'fade-in': !showVideo }">
-        <h1>
-          Building modular software that flows seamlessly with your business idea.
-        </h1>
-        <p class="subtitle">
-          We craft scalable solutions using modern architecture and clean code principles.
-        </p>
-      </div>
+      <!--
+        Headline Text (REMOVED)
+        Per your request, I've removed the headline text
+        so only the video is shown.
+      -->
     </div>
   </section>
 </template>
@@ -34,12 +39,8 @@
 import { ref, onMounted } from 'vue'
 
 const videoRef = ref(null)
-const showVideo = ref(true)
 
-const handleVideoEnd = () => {
-  showVideo.value = false
-}
-
+// Just play the video on mount
 onMounted(() => {
   if (videoRef.value) {
     videoRef.value.play()
@@ -51,12 +52,18 @@ onMounted(() => {
 .landing {
   position: relative;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding: 0;
+  padding: 0 !important;
+  margin: 0;
+  /* These margins pull the section to the full screen edge */
+  margin-left: -80px;
+  margin-right: -80px;
+  margin-top: -40px;
+  margin-bottom: 40px;
 }
 
 .background-image {
@@ -90,54 +97,21 @@ onMounted(() => {
 }
 
 .intro-video {
-  max-width: 80%;
-  max-height: 80%;
-  object-fit: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.headline {
-  text-align: center;
-  color: var(--color-text-light);
-  padding: 0 20px;
-  max-width: 900px;
-  opacity: 0;
-}
-
-.headline.fade-in {
-  animation: fadeIn 1.5s ease-in forwards;
-}
-
-.headline h1 {
-  font-size: 3rem;
-  font-weight: 600;
-  margin-bottom: 20px;
-  line-height: 1.2;
-}
-
-.headline .subtitle {
-  font-size: 1.5rem;
-  font-weight: 300;
-  line-height: 1.6;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
+/* Removed headline styles as it's no longer present */
 
 @media (max-width: 768px) {
-  .intro-video {
-    max-width: 90%;
-    max-height: 60%;
-  }
-
-  .headline h1 {
-    font-size: 2rem;
-  }
-
-  .headline .subtitle {
-    font-size: 1.1rem;
+  .landing {
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-top: -20px;
   }
 }
 </style>

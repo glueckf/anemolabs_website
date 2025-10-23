@@ -1,16 +1,18 @@
 <template>
   <section class="projects">
-    <h2 class="section-heading">OUR PROJECTS</h2>
+    <div class="content-card">
+      <h2 class="section-heading">OUR PROJECTS</h2>
 
-    <div class="development-notice">
-      <h3 class="sub-heading">
-        CURRENTLY IN DEVELOPMENT<span class="asterisk">*</span>
-      </h3>
-      <p class="description">
-        We're currently crafting our first major client project – a sophisticated AI powered
-        solution that demonstrates our full technical capabilities.
-      </p>
-      <p class="coming-soon">More details coming soon.</p>
+      <div class="development-notice">
+        <h3 class="sub-heading">
+          CURRENTLY IN DEVELOPMENT<span class="asterisk">*</span>
+        </h3>
+        <p class="description">
+          We're currently crafting our first major client project – a sophisticated AI powered
+          solution that demonstrates our full technical capabilities.
+        </p>
+        <p class="coming-soon">More details coming soon.</p>
+      </div>
     </div>
   </section>
 </template>
@@ -20,14 +22,14 @@
 
 <style scoped>
 .projects {
-  background-color: var(--color-light-primary);
+  background-color: transparent;
 }
 
 .section-heading {
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   font-weight: 600;
-  color: var(--color-dark-secondary);
-  margin-bottom: 40px;
+  color: var(--color-text-primary);
+  margin-bottom: 30px;
   letter-spacing: 0.05em;
 }
 

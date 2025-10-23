@@ -1,25 +1,12 @@
 <template>
-  <div class="carousel-container">
-    <div class="carousel-track">
-      <div class="carousel-content">
-        <img
-          v-for="(logo, index) in logos"
-          :key="`logo-${index}`"
-          :src="logo.src"
-          :alt="logo.alt"
-          class="tech-logo"
-        />
-      </div>
-      <div class="carousel-content" aria-hidden="true">
-        <img
-          v-for="(logo, index) in logos"
-          :key="`logo-duplicate-${index}`"
-          :src="logo.src"
-          :alt="logo.alt"
-          class="tech-logo"
-        />
-      </div>
-    </div>
+  <div class="tech-logos-container">
+    <img
+      v-for="(logo, index) in logos"
+      :key="`logo-${index}`"
+      :src="logo.src"
+      :alt="logo.alt"
+      class="tech-logo"
+    />
   </div>
 </template>
 
@@ -40,60 +27,31 @@ const logos = [
 </script>
 
 <style scoped>
-.carousel-container {
-  width: 100%;
-  overflow: hidden;
-  padding: 40px 0;
-  position: relative;
-}
-
-.carousel-track {
+.tech-logos-container {
   display: flex;
-  width: fit-content;
-  animation: scroll 30s linear infinite;
-}
-
-.carousel-content {
-  display: flex;
-  gap: 80px;
+  justify-content: space-between;
   align-items: center;
-  padding: 0 40px;
+  width: 100%;
+  padding: 40px 0;
 }
 
 .tech-logo {
-  height: 60px;
+  height: 50px;
   width: auto;
   object-fit: contain;
-  filter: grayscale(100%) opacity(0.6);
-  transition: filter 0.3s ease;
-}
-
-.tech-logo:hover {
-  filter: grayscale(0%) opacity(1);
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-/* Pause animation on hover */
-.carousel-track:hover {
-  animation-play-state: paused;
+  filter: grayscale(100%);
+  opacity: 0.7;
 }
 
 @media (max-width: 768px) {
-  .carousel-content {
-    gap: 50px;
-    padding: 0 20px;
+  .tech-logos-container {
+    gap: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
   }
 
   .tech-logo {
-    height: 45px;
+    height: 40px;
   }
 }
 </style>

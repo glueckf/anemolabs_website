@@ -26,9 +26,19 @@ import TheFooter from './components/TheFooter.vue'
 #app {
   width: 100%;
   min-height: 100vh;
+  background-color: #f5f5f5;
 }
 
 main {
   width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 80px;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 20px;
+  }
 }
 </style>

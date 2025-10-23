@@ -1,47 +1,50 @@
 <template>
   <section class="what-we-do">
-    <!-- Top Grid: Heading and Description -->
-    <div class="top-grid">
-      <div class="heading-column">
-        <h2 class="main-heading">SOFTWARE THAT FLOWS</h2>
-      </div>
-      <div class="description-column">
-        <p>
-          We create custom software solutions designed for performance, scalability and
-          maintainability. Every project follows industry best practices with a focus on
-          clean architecture.
-        </p>
-      </div>
-    </div>
+    <div class="content-card">
+      <!-- Section Label -->
+      <div class="section-label">WHAT WE DO</div>
 
-    <!-- Bottom Section: Our Approach -->
-    <div class="approach-section">
-      <h3 class="approach-heading">OUR APPROACH</h3>
-      <ul class="approach-list">
-        <li>
-          <span class="number">01</span>
-          <span class="text">Modular systems that adapt to your growing needs</span>
-        </li>
-        <li>
-          <span class="number">02</span>
-          <span class="text">Modern tech stack: Vue.js, FastAPI, Python, Docker</span>
-        </li>
-        <li>
-          <span class="number">03</span>
-          <span class="text">Comprehensive testing and documentation</span>
-        </li>
-        <li>
-          <span class="number">04</span>
-          <span class="text">Seamless integrations (APIs, AI tools, legacy systems)</span>
-        </li>
-        <li>
-          <span class="number">05</span>
-          <span class="text">Future-proof architecture that scales with your business</span>
-        </li>
-      </ul>
+      <!-- Top Grid: Heading and Description -->
+      <div class="top-grid">
+        <div class="heading-column">
+          <h2 class="main-heading">SOFTWARE THAT FLOWS</h2>
+        </div>
+        <div class="description-column">
+          <p>
+            We specialise in creating custom software solutions that are designed with performance, scalability and maintainability in mind. Each project adheres to industry best practices, with a particular emphasis on clean architecture.
+          </p>
+        </div>
+      </div>
 
-      <!-- Tech Carousel -->
-      <TechCarousel />
+      <!-- Bottom Section: Our Approach -->
+      <div class="approach-section">
+        <h3 class="approach-heading">OUR APPROACH</h3>
+        <ul class="approach-list">
+          <li class="approach-item">
+            <span class="number">01</span>
+            <span class="text">Modular systems that adapt to your growing needs</span>
+          </li>
+          <li class="approach-item">
+            <span class="number">02</span>
+            <span class="text">Modern tech stack: Vue.js, FastAPI, Python, Docker</span>
+          </li>
+          <li class="approach-item">
+            <span class="number">03</span>
+            <span class="text">Comprehensive testing and documentation</span>
+          </li>
+          <li class="approach-item">
+            <span class="number">04</span>
+            <span class="text">Seamless integrations (APIs, AI tools, legacy systems)</span>
+          </li>
+          <li class="approach-item last">
+            <span class="number">05</span>
+            <span class="text">Future-proof architecture that scales with your business</span>
+          </li>
+        </ul>
+
+        <!-- Tech Logos -->
+        <TechCarousel />
+      </div>
     </div>
   </section>
 </template>
@@ -52,14 +55,22 @@ import TechCarousel from './TechCarousel.vue'
 
 <style scoped>
 .what-we-do {
-  background-color: var(--color-light-primary);
+  background-color: transparent;
+}
+
+.section-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--color-text-primary);
+  margin-bottom: 30px;
 }
 
 .top-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 }
 
 .main-heading {
@@ -77,13 +88,15 @@ import TechCarousel from './TechCarousel.vue'
 }
 
 .approach-section {
-  margin-top: 60px;
+  margin-top: 0;
+  padding-top: 40px;
+  border-top: 1px solid #e0e0e0;
 }
 
 .approach-heading {
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   font-weight: 600;
-  color: var(--color-dark-secondary);
+  color: var(--color-text-primary);
   margin-bottom: 30px;
   letter-spacing: 0.05em;
 }
@@ -91,21 +104,27 @@ import TechCarousel from './TechCarousel.vue'
 .approach-list {
   list-style: none;
   padding: 0;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
 
-.approach-list li {
+.approach-item {
   display: flex;
   align-items: baseline;
   gap: 20px;
-  margin-bottom: 20px;
-  font-size: 1.1rem;
+  padding: 20px 0;
+  font-size: 1rem;
+  border-bottom: 1px solid #d0d0d0;
+}
+
+.approach-item.last {
+  border-bottom: none;
 }
 
 .approach-list .number {
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 600;
-  color: var(--color-accent);
+  font-style: italic;
+  color: var(--color-text-primary);
   min-width: 40px;
 }
 

@@ -33,7 +33,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--color-text-primary);
-  background-color: var(--color-white);
+  background-color: #ffffff;
   line-height: 1.6;
 }
 
@@ -50,4 +50,27 @@ a {
 img {
   max-width: 100%;
   height: auto;
+}
+
+section {
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.content-card {
+  background-color: #ffffff;
+  padding: 60px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  section {
+    margin-bottom: 30px;
+  }
+
+  .content-card {
+    padding: 30px 20px;
+  }
 }

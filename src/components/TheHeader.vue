@@ -1,36 +1,26 @@
 <template>
-  <header class="header">
-    <div class="header-content">
-      <img src="../assets/Logo/Wort-Bildmarke/anemolabs_white.svg" alt="AnemoLabs Logo" class="logo" />
-    </div>
-  </header>
+  <div class="sticky-logo">
+    <!-- This SVG path assumes it's correct based on your original file structure -->
+    <img src="../assets/Logo/Bildmarke/anemolabs_abstract_neongreen.svg" alt="AnemoLabs" class="logo" />
+  </div>
 </template>
 
 <script setup>
+// No script needed for this simple component
 </script>
 
 <style scoped>
-.header {
+.sticky-logo {
+  /* Use position: fixed to keep it on screen during scroll */
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  /* Align with the 'main' content's padding (40px top, 80px left)
+    from App.vue to simulate being in the "1st grid"
+  */
+  top: 40px;
+  left: 80px;
   z-index: 1000;
+  /* Make the container invisible so only the logo is "there" */
   background-color: transparent;
-  padding: 20px 40px;
-  transition: background-color 0.3s ease;
-}
-
-.header.scrolled {
-  background-color: rgba(24, 49, 50, 0.95);
-  backdrop-filter: blur(10px);
-}
-
-.header-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
 }
 
 .logo {
@@ -38,9 +28,11 @@
   width: auto;
 }
 
+/* Adjust for mobile, matching mobile padding from App.vue (20px) */
 @media (max-width: 768px) {
-  .header {
-    padding: 15px 20px;
+  .sticky-logo {
+    top: 20px;
+    left: 20px;
   }
 
   .logo {
